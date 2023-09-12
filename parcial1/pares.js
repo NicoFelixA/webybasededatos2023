@@ -48,6 +48,7 @@ $(document).ready(function(){
         if(total_pares==8){
             $('img').each(function() {
                 $(this).attr('src','fotos-pares/tapar.jpg')
+                $(this).attr('data-estado','0')
             });
             total_pares=0
             par=false
