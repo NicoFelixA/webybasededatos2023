@@ -9,11 +9,12 @@
 </head>
 <body>
     <?php include 'menu.php'; 
+        include 'conexion.php';
         $id= $_GET['id'];
         $sql = "SELECT * FROM alumnos WHERE id=" .$id;
         
         $datos = $conexion->query($sql);
-        $alumno = $datos->fetch_assoc()[0];
+        $alumno = $datos->fetch_assoc();
         
     ?>  
     <div class="container">
