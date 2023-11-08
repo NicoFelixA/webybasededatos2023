@@ -1,4 +1,4 @@
-    <!-- copia el nav del bustra -->
+    <!-- copia el nav del boostrap -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container-fluid">
     <a class="navbar-brand" href="home.php">

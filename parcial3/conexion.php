@@ -2,7 +2,7 @@
 
 $server = "localhost";
 $user = "root";
-$password = ""; //es el password del CHAMP
+$password = ""; //es el password del XAMPP
 $base_de_datos = "cetis107";
 
 //conexion
