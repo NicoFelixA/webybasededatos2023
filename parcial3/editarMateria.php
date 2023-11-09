@@ -18,7 +18,7 @@
 
     $datos = $conexion->query($sql);
 
-    $materias = $datos->fetch_assoc();
+    $materia = $datos->fetch_assoc();
    
     ?>
 
@@ -26,41 +26,26 @@
 <div class="container">
         <div class="row">
             <div class="col-12 card m-4">
-                <form action="actualizarRegistro.php" method="POST">
-                    <input type="hidden" name="id" value="<?php echo $alumno["id"]; ?>">
+                <form action="actualizarMateria.php" method="POST">
+                    <input type="hidden" name="id" value="<?php echo $materia["id"]; ?>">
                     <div class="form-group">
                         <label for="">Nombre: </label>
-                        <input value="<?php echo $alumno["nombre"]; ?>" name="nombre" type="text" class="form-control" placeholder="Teclea el nombre del alumno:" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="">Numero de control: </label>
-                        <input value="<?php echo $alumno["numero_control"]; ?>" name="nc" type="text" class="form-control" placeholder="Teclea el numero de control del alumno:" required>
+                        <input value="<?php echo $materia["nombre"]; ?>" name="nombre" type="text" class="form-control" placeholder="Teclea el nombre del alumno:" required>
                     </div>
                     <div class="form-group">
                         <label for="">Semestre: </label>
-                        <input value="<?php echo $alumno["semestre"]; ?>" name="semestre" type="number" class="form-control" placeholder="Teclea el semestre del alumno:" required>
+                        <input value="<?php echo $materia["semestre"]; ?>" name="semestre" type="number" class="form-control" placeholder="Teclea el semestre del alumno:" required>
                     </div>
                     <div class="form-group">
-                        <label for="">Edad: </label>
-                        <input value="<?php echo $alumno["edad"]; ?>" name="edad" type="number" class="form-control" placeholder="Teclea la Edad del alumno:" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="">Turno: </label>
-                        <select name="turno" id="" class="form-control" required>
-                        <option selected value="<?php echo $alumno["turno"]; ?>"><?php echo $alumno["turno"]; ?></option>
-                        <option value="">Selecciona el turno</option>
-                        <option value="MATUTINO">MATUTINO</option>
-                        <option value="VESPERTINO">VESPERTINO</option>
-                    </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="">Sexo: </label>
-                        <select name="sexo" id="" class="form-control" required>
-                        <option value="">Selecciona el Sexo</option>
-                        <option selected value="<?php echo $alumno["sexo"]; ?>"><?php echo $alumno["sexo"]; ?></option>
-                        <option value="0">Mujer</option>
-                        <option value="1">Hombre</option>
-                        <option value="2">Prefiero no responder</option>
+                        <label for="">Especialidad: </label>
+                        <select name="especialidad" id="" class="form-control" required>
+                        <option value="">Selecciona la especialidad</option>
+                        <option selected value="<?php echo $materia["especialidad"]; ?>"><?php echo $materia["especialidad"]; ?></option>
+                        <option value="PROGRAMACION">PROGRAMACION</option>
+                        <option value="CONTABILIDAD">CONTABILIDAD</option>
+                        <option value="OFIMATICA">OFIMATICA</option>
+                        <option value="CONSTRUCCION">CONSTRUCCION</option>
+                        <option value="ELECTRONICA">ELECTRONICA</option>
                     </select>
                     </div>
                     <div>
