@@ -13,18 +13,16 @@
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="home.php">Inicio</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
-        </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Alumnos
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="#">Acción</a></li>
             <li><a class="dropdown-item" href="consultarAlumnos.php">Consultar alumnos</a></li>
             <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="RegistrarAlumno.php">Registrar Alumno</a></li>
+            <li><a class="dropdown-item" href="RegistrarAlumno.php">Registrar Alumno</a></li>            
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="AsignarMaterias.php">Asignar Materias</a></li>
           </ul>
         </li>
         <li class="nav-item dropdown">
@@ -32,15 +30,12 @@
             Materias
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="#">Acción</a></li>
             <li><a class="dropdown-item" href="consultarMaterias.php">Consultar Materias</a></li>
             <li><hr class="dropdown-divider"></li>
             <li><a class="dropdown-item" href="RegistrarMaterias.php">Registrar Materias</a></li>
           </ul>
         </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Desabilitar</a>
-        </li>
+        
       </ul>
       <form class="d-flex">
         <input class="form-control me-2" type="Buscar" placeholder="Buscar" aria-label="Buscar">

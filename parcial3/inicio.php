@@ -12,12 +12,12 @@
     <?php include 'menu.php';?>
 
     <div class="container">
-    <div class="row">
+    <div class="text-center">
         <div class="col-12">
             <h2>
-                Bienvenido al sistema de gestiond de alumnos
+                Bienvenido al sistema de gestión de alumnos
             </h2>
-            <img src="imagenes/logocetis.png" alt="">
+            <img src="imagenes/logocetis.png" alt="" width="200px">
         </div>
     </div>
     </div>
