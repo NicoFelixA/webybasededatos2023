@@ -12,7 +12,7 @@
         include 'conexion.php';
         include 'menu.php';
 
-        $sql = "SELECT * FROM alumnos"
+        $sql = "SELECT * FROM alumnos";
         $datos = $conexion->query($sql);
     ?>
     <div class="container">
@@ -22,7 +22,9 @@
                 if($datos->num_rows > 0) { ?>
                     <?php while($registro = $datos->fetch_assoc()){ 
                         $id = $registro["id"];
-                       $sql2= "SELECT a.*, m.nombre AS materia_nombre FROM alumnos a INNER JOIN alumno_materias am ON a.id = am.alumnos_id INNER JOIN materias m ON m.id = am.materia_id";
+                       $sql2= "SELECT a.*, m.nombre AS materia_nombre FROM alumnos a INNER JOIN alumno_materias
+                        am ON a.id = am.alumno_id INNER JOIN materias m ON m.id = am.materia_id WHERE a.id=".$id;
+                       $datos2 = $conexion->query($sql2); 
                     ?>
                         
                         <div class="card">
@@ -32,12 +34,14 @@
                             <div class="card-body">
                                 <h5 class="card-title">Materias cargadas:</h5>
                                 <p class="card-text">
-
+                                    <ul>
+                                        <?php while($materia = $datos2->fetch_assoc()) { ?>
+                                            <li> <?php echo $materia["materia_nombre"]; ?></li>
+                                        <?php } ?>
+                                    </ul>
                                 </p>
                             </div>
                         </div>
-
-
                     <?php } ?>
                     <?php } else {?>
                         <h3>No existen alumnos en la base de datos</h3>
