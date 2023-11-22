@@ -42,7 +42,7 @@ CREATE TABLE `alumnos` (
 --
 
 INSERT INTO `alumnos` (`id`, `nombre`, `numero_control`, `semestre`, `edad`, `turno`, `sexo`) VALUES
-(1, 'Beltran Duarte Paulet Mariana', '21325061070363', 5, 17, 'Vespertino', 0),
+(1, 'Felix Aguilasocho Nicolas', '21325061070363', 5, 17, 'Vespertino', 0),
 (2, 'Garcia Leyva Leonardo David', '21325067070484', 5, 17, 'Vespertino', 1),
 (3, 'Apodaca Morales Hasly Kamila', '21325067070423', 5, 17, 'Vespertino', 0),
 (4, 'Campos Rodriguez Hector Javier', '21325067070468', 5, 17, 'Vespertino', 1),
